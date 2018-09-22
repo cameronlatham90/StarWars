@@ -12,6 +12,8 @@
 		98F9752E2156AD9E001F50B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F9752C2156AD9E001F50B9 /* Main.storyboard */; };
 		98F975302156AD9F001F50B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F9752F2156AD9F001F50B9 /* Assets.xcassets */; };
 		98F975332156AD9F001F50B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F975312156AD9F001F50B9 /* LaunchScreen.storyboard */; };
+		98F975442156BBEE001F50B9 /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F975432156BBEE001F50B9 /* StarWarsApi.swift */; };
+		98F975482156BD0F001F50B9 /* StarWarsCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F975472156BD0F001F50B9 /* StarWarsCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		98F9752F2156AD9F001F50B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98F975322156AD9F001F50B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98F975342156AD9F001F50B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98F975432156BBEE001F50B9 /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
+		98F975472156BD0F001F50B9 /* StarWarsCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		98F975272156AD9E001F50B9 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				98F9753A2156AF27001F50B9 /* Repository */,
 				98F975282156AD9E001F50B9 /* AppDelegate.swift */,
 				98F9752A2156AD9E001F50B9 /* ViewController.swift */,
 				98F9752C2156AD9E001F50B9 /* Main.storyboard */,
@@ -62,6 +67,39 @@
 				98F975342156AD9F001F50B9 /* Info.plist */,
 			);
 			path = StarWars;
+			sourceTree = "<group>";
+		};
+		98F9753A2156AF27001F50B9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				98F975462156BCF7001F50B9 /* Cache */,
+				98F975452156BCE5001F50B9 /* Database */,
+				98F975422156BBD9001F50B9 /* Network */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		98F975422156BBD9001F50B9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				98F975432156BBEE001F50B9 /* StarWarsApi.swift */,
+				98F975472156BD0F001F50B9 /* StarWarsCharacter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		98F975452156BCE5001F50B9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		98F975462156BCF7001F50B9 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +175,8 @@
 			files = (
 				98F9752B2156AD9E001F50B9 /* ViewController.swift in Sources */,
 				98F975292156AD9E001F50B9 /* AppDelegate.swift in Sources */,
+				98F975482156BD0F001F50B9 /* StarWarsCharacter.swift in Sources */,
+				98F975442156BBEE001F50B9 /* StarWarsApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
