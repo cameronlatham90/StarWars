@@ -26,30 +26,15 @@ class StarWarsApi {
                 return
             }
             
-            do {
-                guard let todo = try JSONSerialization.jsonObject(with: responseData, options: [])
-                    as? [String: Any] else {
-                        print("error trying to convert data to JSON")
-                        return
-                }
-                
-                
-                // now we have the todo
-                // let's just print it to prove we can access it
-                print("The todo is: " + todo.description)
-                
-                // the todo object is a dictionary
-                // so we just access the title using the "title" key
-                // so check for a title and print it if we have one
-                guard let todoTitle = todo["results"] as? String else {
-                    print("Could not get todo title from JSON")
-                    return
-                }
-                print("The title is: " + todoTitle)
-            } catch  {
-                print("error trying to convert data to JSON")
+            guard let results = try? JSONDecoder().decode(Results.self, from: responseData) else {
+                print("Error: Couldn't decode data into results")
                 return
-            }        }
+            }
+            
+            for character in results.starWarsCharacters {
+                print(character.skinColor)
+            }
+        }
         task.resume()
     }
 }
