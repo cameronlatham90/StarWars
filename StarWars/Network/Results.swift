@@ -9,7 +9,7 @@
 import Foundation
 
 struct Results: Decodable {
-    let starWarsCharacters: [starWarsCharacter]
+    let starWarsCharacters: [StarWarsCharacter]
     
     enum CodingKeys: String, CodingKey {
         case starWarsCharacters = "results"

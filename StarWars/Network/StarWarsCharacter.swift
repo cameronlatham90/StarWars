@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct starWarsCharacter: Decodable {
+struct StarWarsCharacter: Decodable {
     
     let name: String
     let height: String
@@ -19,18 +19,6 @@ struct starWarsCharacter: Decodable {
     let birthYear: String
     let gender: String
     let image: String
-    
-//    init(name: String, height: String, mass: String, hairColor: String, skinColor: String, eyeColor: String, birthYear: String, gender: String, image: String){
-//        self.name = name
-//        self.height = height
-//        self.mass = mass
-//        self.hairColor = hairColor
-//        self.skinColor = skinColor
-//        self.eyeColor = eyeColor
-//        self.birthYear = birthYear
-//        self.gender = gender
-//        self.image = image
-//    }
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -43,5 +31,4 @@ struct starWarsCharacter: Decodable {
         case gender
         case image
     }
-    
 }
